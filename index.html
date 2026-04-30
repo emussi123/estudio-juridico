@@ -3,84 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Estudio Jurídico - Consultas y Trámites</title>
-    <!-- Bootstrap para diseño rápido y profesional -->
+    <title>Estudio Jurídico Dra. Sonia Benitez - Concordia</title>
+    <!-- Bootstrap para un diseño profesional y móvil -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Iconos -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
     <style>
-        :root { --azul-legal: #1a2a40; --dorado: #c5a059; }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f8f9fa; }
-        .hero { background: var(--azul-legal); color: white; padding: 60px 0; border-bottom: 5px solid var(--dorado); }
-        .btn-anses { background-color: #0080FF; color: white; font-weight: bold; padding: 15px 30px; }
-        .btn-anses:hover { background-color: #005bb5; color: white; }
-        .card-tramite { border: none; border-top: 4px solid var(--dorado); transition: 0.3s; }
-        .card-tramite:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+        :root { --azul-legal: #1a2a40; --dorado: #c5a059; --celeste-anses: #0080FF; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; background-color: #f4f7f6; color: #333; }
+        
+        /* Encabezado */
+        .hero { background: var(--azul-legal); color: white; padding: 80px 0; border-bottom: 6px solid var(--dorado); }
+        .hero h1 { font-weight: 700; letter-spacing: 1px; }
+        
+        /* Tarjetas de Servicios */
+        .card-servicio { border: none; border-radius: 10px; transition: 0.3s; background: white; }
+        .card-servicio:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
+        .icon-box { color: var(--dorado); font-size: 2rem; margin-bottom: 15px; }
+
+        /* Botón ANSES */
+        .btn-anses { background-color: var(--celeste-anses); color: white; font-weight: bold; padding: 20px; border-radius: 50px; text-transform: uppercase; letter-spacing: 1px; transition: 0.4s; }
+        .btn-anses:hover { background-color: #005bb5; color: white; transform: scale(1.02); }
+
+        /* Footer y Contacto */
+        .contact-info { background: #fff; padding: 40px; border-radius: 15px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
+        footer { background: var(--azul-legal); color: rgba(255,255,255,0.7); padding: 30px 0; }
     </style>
 </head>
 <body>
 
-    <!-- Encabezado -->
+    <!-- Header -->
     <header class="hero text-center">
         <div class="container">
-            <h1>Estudio Jurídico Integral</h1>
-            <p class="lead">Asesoramiento previsional y trámites ágiles</p>
+            <h1 class="display-4">Estudio Jurídico Dra. Sonia Benitez</h1>
+            <p class="lead mb-0">Especialista en Derecho Previsional y Civil</p>
+            <p class="small text-uppercase" style="color: var(--dorado);">Concordia, Entre Ríos</p>
         </div>
     </header>
 
     <main class="container my-5">
-        <div class="row g-4">
-            <!-- Sección Info Clientes -->
-            <div class="col-md-7">
-                <h2 class="mb-4">Portal de Autogestión</h2>
-                <p>Para agilizar su trámite de jubilación o pensión, puede consultar el estado de su expediente directamente en el portal oficial de ANSES.</p>
-                
-                <div class="alert alert-info">
-                    <strong>Importante:</strong> Para ingresar necesitará su CUIL y la Clave de la Seguridad Social. El estudio nunca le solicitará estas claves por fuera de los canales oficiales.
-                </div>
-
-                <div class="d-grid gap-2">
-                    <a href="https://servicioscorp.anses.gob.ar/clavelogon/logon.aspx?sistema=mianses" target="_blank" class="btn btn-anses btn-lg shadow">
-                        ACCEDER A MI ANSES (Consultar Jubilación)
-                    </a>
+        
+        <!-- Sección Trámites Rápidos -->
+        <div class="row mb-5 justify-content-center">
+            <div class="col-md-10 text-center">
+                <div class="p-5 bg-white shadow-sm rounded-4 border-start border-5 border-primary">
+                    <h2 class="h3 mb-4">¿Desea consultar el estado de su trámite?</h2>
+                    <p class="text-muted mb-4">Acceda de forma segura al portal oficial de ANSES para revisar su jubilación o pensión en tiempo real.</p>
+                    <div class="d-grid gap-2 col-lg-8 mx-auto">
+                        <a href="https://servicioscorp.anses.gob.ar/clavelogon/logon.aspx?sistema=mianses" target="_blank" class="btn btn-anses shadow">
+                            <i class="bi bi-person-badge-fill me-2"></i> Ingresar a Mi ANSES
+                        </a>
+                    </div>
+                    <p class="small text-muted mt-3 italic text-center">
+                        * Recuerde tener a mano su CUIL y Clave de Seguridad Social.
+                    </p>
                 </div>
             </div>
+        </div>
 
-            <!-- Sección Requisitos -->
-            <div class="col-md-5">
-                <div class="card card-tramite h-100 shadow-sm">
-                    <div class="card-body">
-                        <h3 class="card-title h5">¿Qué traer a la consulta?</h3>
-                        <ul class="list-group list-group-flush mt-3">
-                            <li class="list-group-item">✔️ DNI original y copia</li>
-                            <li class="list-group-item">✔️ Certificaciones de servicios</li>
-                            <li class="list-group-item">✔️ Historial laboral impreso</li>
-                            <li class="list-group-item">✔️ Últimos recibos de sueldo</li>
-                        </ul>
+        <!-- Servicios -->
+        <h3 class="text-center mb-5 fw-bold">Especialidades del Estudio</h3>
+        <div class="row g-4 mb-5">
+            <div class="col-md-4">
+                <div class="card card-servicio h-100 p-4 text-center shadow-sm">
+                    <div class="icon-box"><i class="bi bi-house-heart"></i></div>
+                    <h4>Jubilaciones</h4>
+                    <p class="text-muted">Asesoramiento integral para obtener su beneficio jubilatorio de la manera más ágil.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card card-servicio h-100 p-4 text-center shadow-sm">
+                    <div class="icon-box"><i class="bi bi-people-fill"></i></div>
+                    <h4>Pensiones</h4>
+                    <p class="text-muted">Trámites por fallecimiento, invalidez y regímenes especiales.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card card-servicio h-100 p-4 text-center shadow-sm">
+                    <div class="icon-box"><i class="bi bi-file-earmark-text"></i></div>
+                    <h4>Sucesiones</h4>
+                    <p class="text-muted">Gestión profesional de herencias y declaratoria de herederos.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contacto y Ubicación -->
+        <div class="row g-4 justify-content-center">
+            <div class="col-md-10">
+                <div class="contact-info">
+                    <div class="row align-items-center">
+                        <div class="col-md-6 border-end">
+                            <h4 class="mb-4">Información de Contacto</h4>
+                            <p><i class="bi bi-geo-alt-fill text-danger me-2"></i> Feliciano 1346, Concordia, E.R.</p>
+                            <p><i class="bi bi-envelope-fill text-primary me-2"></i> estudiobenitez@hotmail.com</p>
+                            <p><i class="bi bi-clock-fill text-warning me-2"></i> Lunes a Viernes - Consultar horarios</p>
+                        </div>
+                        <div class="col-md-6 text-center">
+                            <h4 class="mb-4 mt-4 mt-md-0">Atención Directa</h4>
+                            <a href="https://wa.me/5493454159109?text=Hola%20Dra.%20Sonia,%20quisiera%20hacerle%20una%20consulta" target="_blank" class="btn btn-success btn-lg w-100 mb-3 py-3">
+                                <i class="bi bi-whatsapp me-2"></i> Enviar WhatsApp
+                            </a>
+                            <small class="text-muted">Haga clic para iniciar un chat inmediato</small>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-
-        <hr class="my-5">
-
-        <!-- Información de Contacto -->
-        <div class="row text-center">
-            <div class="col-md-4">
-                <h5>Horarios</h5>
-                <p>Lunes a Viernes<br>08:00 a 16:00 hs</p>
-            </div>
-            <div class="col-md-4">
-                <h5>Ubicación</h5>
-                <p>Centro, Concordia<br>Entre Ríos</p>
-            </div>
-            <div class="col-md-4">
-                <h5>Contacto Directo</h5>
-                <p>WhatsApp: [Tu número aquí]<br>Email: [Email de tu tía]</p>
-            </div>
-        </div>
     </main>
 
-    <footer class="text-center py-4 bg-dark text-light">
-        <small>&copy; 2026 Estudio Jurídico - Todos los derechos reservados.</small>
+    <footer class="text-center">
+        <div class="container">
+            <p class="mb-1">Dra. Sonia Benitez &copy; 2026 - Estudio Jurídico Integral</p>
+            <p class="small">Diseñado para la atención y agilización de trámites previsionales.</p>
+        </div>
     </footer>
 
 </body>
