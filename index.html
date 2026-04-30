@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudio Jurídico - Consultas y Trámites</title>
+    <!-- Bootstrap para diseño rápido y profesional -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root { --azul-legal: #1a2a40; --dorado: #c5a059; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f8f9fa; }
+        .hero { background: var(--azul-legal); color: white; padding: 60px 0; border-bottom: 5px solid var(--dorado); }
+        .btn-anses { background-color: #0080FF; color: white; font-weight: bold; padding: 15px 30px; }
+        .btn-anses:hover { background-color: #005bb5; color: white; }
+        .card-tramite { border: none; border-top: 4px solid var(--dorado); transition: 0.3s; }
+        .card-tramite:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+    </style>
+</head>
+<body>
+
+    <!-- Encabezado -->
+    <header class="hero text-center">
+        <div class="container">
+            <h1>Estudio Jurídico Integral</h1>
+            <p class="lead">Asesoramiento previsional y trámites ágiles</p>
+        </div>
+    </header>
+
+    <main class="container my-5">
+        <div class="row g-4">
+            <!-- Sección Info Clientes -->
+            <div class="col-md-7">
+                <h2 class="mb-4">Portal de Autogestión</h2>
+                <p>Para agilizar su trámite de jubilación o pensión, puede consultar el estado de su expediente directamente en el portal oficial de ANSES.</p>
+                
+                <div class="alert alert-info">
+                    <strong>Importante:</strong> Para ingresar necesitará su CUIL y la Clave de la Seguridad Social. El estudio nunca le solicitará estas claves por fuera de los canales oficiales.
+                </div>
+
+                <div class="d-grid gap-2">
+                    <a href="https://servicioscorp.anses.gob.ar/clavelogon/logon.aspx?sistema=mianses" target="_blank" class="btn btn-anses btn-lg shadow">
+                        ACCEDER A MI ANSES (Consultar Jubilación)
+                    </a>
+                </div>
+            </div>
+
+            <!-- Sección Requisitos -->
+            <div class="col-md-5">
+                <div class="card card-tramite h-100 shadow-sm">
+                    <div class="card-body">
+                        <h3 class="card-title h5">¿Qué traer a la consulta?</h3>
+                        <ul class="list-group list-group-flush mt-3">
+                            <li class="list-group-item">✔️ DNI original y copia</li>
+                            <li class="list-group-item">✔️ Certificaciones de servicios</li>
+                            <li class="list-group-item">✔️ Historial laboral impreso</li>
+                            <li class="list-group-item">✔️ Últimos recibos de sueldo</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr class="my-5">
+
+        <!-- Información de Contacto -->
+        <div class="row text-center">
+            <div class="col-md-4">
+                <h5>Horarios</h5>
+                <p>Lunes a Viernes<br>08:00 a 16:00 hs</p>
+            </div>
+            <div class="col-md-4">
+                <h5>Ubicación</h5>
+                <p>Centro, Concordia<br>Entre Ríos</p>
+            </div>
+            <div class="col-md-4">
+                <h5>Contacto Directo</h5>
+                <p>WhatsApp: [Tu número aquí]<br>Email: [Email de tu tía]</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="text-center py-4 bg-dark text-light">
+        <small>&copy; 2026 Estudio Jurídico - Todos los derechos reservados.</small>
+    </footer>
+
+</body>
+</html>
