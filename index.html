@@ -9,41 +9,65 @@
     <style>
         :root { --azul-legal: #1a2a40; --dorado: #c5a059; --celeste-anses: #0080FF; }
         body { font-family: 'Segoe UI', Arial, sans-serif; background-color: #f4f7f6; color: #333; }
-        .hero { background: var(--azul-legal); color: white; padding: 60px 0; border-bottom: 6px solid var(--dorado); }
+        .hero { background: var(--azul-legal); color: white; padding: 50px 0; border-bottom: 6px solid var(--dorado); }
         .card-servicio { border: none; border-radius: 10px; transition: 0.3s; background: white; }
         .card-servicio:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
         .icon-box { color: var(--dorado); font-size: 2rem; margin-bottom: 15px; }
-        .btn-anses { background-color: var(--celeste-anses); color: white; font-weight: bold; padding: 18px; border-radius: 50px; text-transform: uppercase; transition: 0.4s; text-decoration: none; display: block; }
+        .btn-anses { background-color: var(--celeste-anses); color: white; font-weight: bold; padding: 15px; border-radius: 50px; text-transform: uppercase; transition: 0.4s; text-decoration: none; display: block; font-size: 0.95rem; }
         .btn-anses:hover { background-color: #005bb5; color: white; transform: scale(1.02); }
         .contact-info { background: #fff; padding: 30px; border-radius: 15px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
         .horarios-badge { background-color: #e9ecef; color: var(--azul-legal); padding: 10px 15px; border-radius: 8px; font-weight: 600; display: inline-block; }
         footer { background: var(--azul-legal); color: rgba(255,255,255,0.7); padding: 30px 0; margin-top: 50px; }
         
-        /* Estilos para la sección de Reajustes */
-        .seccion-reajustes { background: white; border-radius: 15px; padding: 40px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); border-top: 4px solid var(--dorado); }
-        .alerta-clave { background-color: #fff3cd; border-left: 4px solid #ffc107; color: #664d03; padding: 12px; border-radius: 6px; font-size: 0.9rem; }
-        .badge-anses-local { background-color: #e2f0ff; color: #005bb5; font-weight: bold; padding: 4px 8px; border-radius: 4px; }
+        .seccion-reajustes { background: white; border-radius: 15px; padding: 30px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); border-top: 4px solid var(--dorado); }
+        .alerta-clave { background-color: #fff3cd; border-left: 4px solid #ffc107; color: #664d03; padding: 12px; border-radius: 6px; font-size: 0.85rem; }
+
+        /* Optimización crucial para celulares (Scroll Horizontal) */
+        @media (max-width: 767.98px) {
+            .seccion-reajustes { padding: 20px; }
+            .hero { padding: 35px 0; }
+            
+            /* Contenedor que permite deslizar de costado */
+            .scroll-movil-horizontal {
+                display: flex;
+                flex-wrap: nowrap;
+                overflow-x: auto;
+                scroll-snap-type: x mandatory;
+                padding-bottom: 15px;
+                padding-top: 5px;
+                gap: 15px;
+            }
+            /* Forzamos a que cada tarjeta ocupe el 85% del ancho para que se vea el inicio de la siguiente */
+            .scroll-movil-horizontal > [class*="col-"] {
+                flex: 0 0 85%;
+                max-width: 85%;
+                scroll-snap-align: start;
+            }
+            /* Ocultar la barra de scroll para que quede más estético */
+            .scroll-movil-horizontal::-webkit-scrollbar {
+                display: none;
+            }
+        }
     </style>
 </head>
 <body>
 
     <header class="hero text-center">
         <div class="container">
-            <!-- <img src="img/perfil.jpg" class="rounded-circle mb-3 border border-3 border-white shadow" style="width: 120px; height: 120px; object-fit: cover;"> -->
-            <h1 class="display-5 fw-bold">Estudio Jurídico Dra. Sonia Benitez</h1>
-            <p class="lead mb-0">Especialista en Derecho Previsional y Civil</p>
-            <p class="small text-uppercase mt-2" style="color: var(--dorado); font-weight: bold;"><i class="bi bi-geo-alt"></i> Concordia, Entre Ríos</p>
+            <h1 class="display-6 fw-bold">Estudio Jurídico Dra. Sonia Benitez</h1>
+            <p class="lead mb-0 fs-6">Especialista en Derecho Previsional y Civil</p>
+            <p class="small text-uppercase mt-2 mb-0" style="color: var(--dorado); font-weight: bold;"><i class="bi bi-geo-alt"></i> Concordia, Entre Ríos</p>
         </div>
     </header>
 
-    <main class="container my-5">
+    <main class="container my-4 my-md-5">
         
         <!-- Portal de Autogestión (ANSES) -->
-        <div class="row mb-5 justify-content-center">
+        <div class="row mb-4 mb-md-5 justify-content-center">
             <div class="col-md-10 col-lg-8">
-                <div class="p-4 p-md-5 bg-white shadow-sm rounded-4 border-start border-5 border-primary text-center">
-                    <h2 class="h4 mb-3">Consulta de Expedientes ANSES</h2>
-                    <p class="text-muted mb-4">Agilice su trámite ingresando al portal oficial con su CUIL y Clave de Seguridad Social.</p>
+                <div class="p-4 bg-white shadow-sm rounded-4 border-start border-5 border-primary text-center">
+                    <h2 class="h5 mb-2">Consulta de Expedientes ANSES</h2>
+                    <p class="text-muted small mb-3">Agilice su trámite ingresando al portal oficial con su CUIL y Clave de Seguridad Social.</p>
                     <a href="https://servicioscorp.anses.gob.ar/clavelogon/logon.aspx?sistema=mianses" target="_blank" class="btn btn-anses shadow">
                         <i class="bi bi-person-badge-fill me-2"></i> IR A MI ANSES
                     </a>
@@ -52,20 +76,20 @@
         </div>
 
         <!-- SECCIÓN: Reajuste de Haberes y Requisitos -->
-        <div class="row justify-content-center mb-5">
+        <div class="row justify-content-center mb-4 mb-md-5">
             <div class="col-md-10">
                 <div class="seccion-reajustes">
-                    <h3 class="h4 text-center mb-4 fw-bold" style="color: var(--azul-legal);">
+                    <h3 class="h5 text-center mb-4 fw-bold" style="color: var(--azul-legal);">
                         <i class="bi bi-calculator-fill me-2" style="color: var(--dorado);"></i> Reajuste de Haberes: Requisitos de Inicio
                     </h3>
                     
                     <div class="row g-4">
                         <!-- Paso 1 -->
                         <div class="col-md-6">
-                            <div class="d-flex mb-3">
+                            <div class="d-flex mb-2">
                                 <div class="me-3"><span class="badge bg-secondary fs-6 rounded-circle">1</span></div>
                                 <div>
-                                    <h5 class="fw-bold mb-1">Datos de Acceso Previsional</h5>
+                                    <h5 class="fw-bold h6 mb-1">Datos de Acceso Previsional</h5>
                                     <p class="small text-muted mb-2">Es indispensable contar con sus datos personales de autogestión:</p>
                                     <ul class="small text-muted ps-3 mb-2">
                                         <li>Número de <strong>CUIL</strong>.</li>
@@ -80,13 +104,13 @@
 
                         <!-- Paso 2 -->
                         <div class="col-md-6">
-                            <div class="d-flex mb-3">
+                            <div class="d-flex mb-2">
                                 <div class="me-3"><span class="badge bg-secondary fs-6 rounded-circle">2</span></div>
                                 <div>
-                                    <h5 class="fw-bold mb-1">Expediente Administrativo</h5>
+                                    <h5 class="fw-bold h6 mb-1">Expediente Administrativo</h5>
                                     <p class="small text-muted mb-2">Debe presentar el expediente completo que le otorgó su beneficio original.</p>
                                     <p class="small text-muted mb-2"><strong>¿Dónde y cómo solicitarlo?</strong></p>
-                                    <div class="p-3 bg-light rounded border mb-2" style="font-size: 0.9rem;">
+                                    <div class="p-3 bg-light rounded border mb-2" style="font-size: 0.85rem;">
                                         <i class="bi bi-building me-1 text-primary"></i> En las oficinas de <strong>ANSES</strong>.<br>
                                         <i class="bi bi-calendar-event me-1 text-primary"></i> <strong>Sin turno previo</strong>.<br>
                                         <i class="bi bi-calendar-check me-1 text-primary"></i> Días: <strong>Lunes, Miércoles y Viernes</strong>.<br>
@@ -100,30 +124,31 @@
 
                     <hr class="my-4" style="color: var(--dorado); opacity: 0.3;">
 
-                    <!-- Documentación en el Estudio -->
+                    <!-- Documentación en el Estudio (Convertido a scroll deslizable en celular) -->
                     <div class="bg-light p-3 rounded-3">
-                        <h5 class="fw-bold h6 mb-3 text-center text-uppercase" style="color: var(--azul-legal); letter-spacing: 0.5px;">
+                        <h5 class="fw-bold style-h6 small mb-3 text-center text-uppercase" style="color: var(--azul-legal); letter-spacing: 0.5px;">
                             <i class="bi bi-file-earmark-text-fill me-1 text-secondary"></i> Instrumentos a firmar en el Estudio
                         </h5>
-                        <p class="small text-muted text-center mb-3">Para formalizar la representación legal y dar inicio a las acciones, en nuestra oficina se suscribirá:</p>
-                        <div class="row text-center g-3">
+                        <p class="small text-muted text-center mb-3 d-none d-md-block">Para formalizar la representación legal y dar inicio a las acciones, en nuestra oficina se suscribirá:</p>
+                        
+                        <div class="row text-center g-3 scroll-movil-horizontal">
                             <div class="col-sm-4">
-                                <div class="p-2 bg-white rounded border shadow-sm h-100 d-flex align-items-center justify-content-center flex-column">
-                                    <i class="bi bi-pencil-square text-success mb-1 fs-5"></i>
+                                <div class="p-3 bg-white rounded border shadow-sm h-100 d-flex align-items-center justify-content-center flex-column">
+                                    <i class="bi bi-pencil-square text-success mb-2 fs-4"></i>
                                     <span class="small fw-semibold d-block">Poder para Trámite</span>
                                     <span style="font-size: 0.75rem;" class="text-muted">Autorización formal ante ANSES</span>
                                 </div>
                             </div>
                             <div class="col-sm-4">
-                                <div class="p-2 bg-white rounded border shadow-sm h-100 d-flex align-items-center justify-content-center flex-column">
-                                    <i class="bi bi-shield-check text-success mb-1 fs-5"></i>
+                                <div class="p-3 bg-white rounded border shadow-sm h-100 d-flex align-items-center justify-content-center flex-column">
+                                    <i class="bi bi-shield-check text-success mb-2 fs-4"></i>
                                     <span class="small fw-semibold d-block">Consentimiento Informado</span>
                                     <span style="font-size: 0.75rem;" class="text-muted">Sobre uso de Clave de Seguridad Social</span>
                                 </div>
                             </div>
                             <div class="col-sm-4">
-                                <div class="p-2 bg-white rounded border shadow-sm h-100 d-flex align-items-center justify-content-center flex-column">
-                                    <i class="bi bi-folder-symlink text-success mb-1 fs-5"></i>
+                                <div class="p-3 bg-white rounded border shadow-sm h-100 d-flex align-items-center justify-content-center flex-column">
+                                    <i class="bi bi-folder-symlink text-success mb-2 fs-4"></i>
                                     <span class="small fw-semibold d-block">Poder de ANSES</span>
                                     <span style="font-size: 0.75rem;" class="text-muted">Para solicitud de documentación oficial</span>
                                 </div>
@@ -135,27 +160,27 @@
             </div>
         </div>
 
-        <!-- Especialidades -->
-        <div class="row g-4 mb-5">
+        <!-- Especialidades (Convertido a scroll deslizable en celular) -->
+        <div class="row g-4 mb-5 scroll-movil-horizontal">
             <div class="col-md-4 text-center">
                 <div class="card card-servicio h-100 p-4 shadow-sm">
                     <div class="icon-box"><i class="bi bi-bank"></i></div>
                     <h4 class="h5">Jubilaciones</h4>
-                    <p class="small text-muted">Asesoramiento para obtener su beneficio jubilatorio de forma eficiente.</p>
+                    <p class="small text-muted mb-0">Asesoramiento para obtener su beneficio jubilatorio de forma eficiente.</p>
                 </div>
             </div>
             <div class="col-md-4 text-center">
                 <div class="card card-servicio h-100 p-4 shadow-sm">
                     <div class="icon-box"><i class="bi bi-people-fill"></i></div>
                     <h4 class="h5">Pensiones</h4>
-                    <p class="small text-muted">Trámites por fallecimiento, invalidez y regímenes especiales previsionales.</p>
+                    <p class="small text-muted mb-0">Trámites por fallecimiento, invalidez y regímenes especiales previsionales.</p>
                 </div>
             </div>
             <div class="col-md-4 text-center">
                 <div class="card card-servicio h-100 p-4 shadow-sm">
                     <div class="icon-box"><i class="bi bi-file-earmark-ruled"></i></div>
                     <h4 class="h5">Sucesiones</h4>
-                    <p class="small text-muted">Gestión profesional de declaratoria de herederos y trámites sucesorios.</p>
+                    <p class="small text-muted mb-0">Gestión profesional de declaratoria de herederos y trámites sucesorios.</p>
                 </div>
             </div>
         </div>
@@ -180,11 +205,11 @@
                             </div>
                         </div>
                         <div class="col-md-6 text-center">
-                            <h4 class="h5 mb-4 fw-bold">Consulte ahora</h4>
+                            <h4 class="h5 mb-3 fw-bold">Consulte ahora</h4>
                             <a href="https://wa.me/5493454159109?text=Hola%20Dra.%20Sonia,%20quisiera%20hacerle%20una%20consulta" target="_blank" class="btn btn-success btn-lg w-100 py-3 shadow">
                                 <i class="bi bi-whatsapp me-2"></i> Enviar WhatsApp
                             </a>
-                            <p class="small text-muted mt-3 italic">Haga clic para iniciar un chat y coordinar una entrevista.</p>
+                            <p class="small text-muted mt-3 mb-0 italic">Haga clic para iniciar un chat y coordinar una entrevista.</p>
                         </div>
                     </div>
                 </div>
