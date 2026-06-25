@@ -18,13 +18,17 @@
         .contact-info { background: #fff; padding: 30px; border-radius: 15px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
         .horarios-badge { background-color: #e9ecef; color: var(--azul-legal); padding: 10px 15px; border-radius: 8px; font-weight: 600; display: inline-block; }
         footer { background: var(--azul-legal); color: rgba(255,255,255,0.7); padding: 30px 0; margin-top: 50px; }
+        
+        /* Nuevos estilos para la sección de Reajustes */
+        .seccion-reajustes { background: white; border-radius: 15px; padding: 40px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); border-top: 4px solid var(--dorado); }
+        .alerta-clave { background-color: #fff3cd; border-left: 4px solid #ffc107; color: #664d03; padding: 12px; border-radius: 6px; font-size: 0.9rem; }
+        .badge-anses-local { background-color: #e2f0ff; color: #005bb5; font-weight: bold; padding: 4px 8px; border-radius: 4px; }
     </style>
 </head>
 <body>
 
     <header class="hero text-center">
         <div class="container">
-            <!-- Si conseguís una foto de Sonia, podés descomentar la línea de abajo -->
             <!-- <img src="img/perfil.jpg" class="rounded-circle mb-3 border border-3 border-white shadow" style="width: 120px; height: 120px; object-fit: cover;"> -->
             <h1 class="display-5 fw-bold">Estudio Jurídico Dra. Sonia Benitez</h1>
             <p class="lead mb-0">Especialista en Derecho Previsional y Civil</p>
@@ -68,6 +72,91 @@
                     <div class="icon-box"><i class="bi bi-file-earmark-ruled"></i></div>
                     <h4 class="h5">Sucesiones</h4>
                     <p class="small text-muted">Gestión profesional de declaratoria de herederos y trámites sucesorios.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- NUEVA SECCIÓN: Reajuste de Haberes y Requisitos -->
+        <div class="row justify-content-center mb-5">
+            <div class="col-md-10">
+                <div class="seccion-reajustes">
+                    <h3 class="h4 text-center mb-4 fw-bold" style="color: var(--azul-legal);">
+                        <i class="bi bi-calculator-fill me-2" style="color: var(--dorado);"></i> Reajuste de Haberes: Requisitos de Inicio
+                    </h3>
+                    <p class="text-center text-muted mb-4">Si considera que su haber jubilatorio no está correctamente liquidado, prepare la siguiente documentación para iniciar el reclamo:</p>
+                    
+                    <div class="row g-4">
+                        <!-- Paso 1 -->
+                        <div class="col-md-6">
+                            <div class="d-flex mb-3">
+                                <div class="me-3"><span class="badge bg-secondary fs-6 rounded-circle">1</span></div>
+                                <div>
+                                    <h5 class="fw-bold mb-1">Datos de Acceso Previsional</h5>
+                                    <p class="small text-muted mb-2">Es indispensable contar con sus datos personales de autogestión:</p>
+                                    <ul class="small text-muted ps-3 mb-2">
+                                        <li>Número de <strong>CUIL</strong>.</li>
+                                        <li><strong>Clave de la Seguridad Social</strong> de ANSES.</li>
+                                    </ul>
+                                    <div class="alerta-clave">
+                                        <i class="bi bi-exclamation-triangle-fill me-1"></i> <strong>Aviso importante:</strong> La clave debe estar debidamente habilitada y <strong>no debe ser modificada</strong> durante el transcurso del trámite.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Paso 2 -->
+                        <div class="col-md-6">
+                            <div class="d-flex mb-3">
+                                <div class="me-3"><span class="badge bg-secondary fs-6 rounded-circle">2</span></div>
+                                <div>
+                                    <h5 class="fw-bold mb-1">Expediente Administrativo</h5>
+                                    <p class="small text-muted mb-2">Debe presentar el expediente completo que le otorgó su beneficio original.</p>
+                                    <p class="small text-muted mb-2"><strong>¿Dónde y cómo solicitarlo?</strong></p>
+                                    <div class="p-3 bg-light rounded border mb-2" style="font-size: 0.9rem;">
+                                        <i class="bi bi-building me-1 text-primary"></i> En las oficinas de <strong>ANSES</strong>.<br>
+                                        <i class="bi bi-calendar-event me-1 text-primary"></i> <strong>Sin turno previo</strong>.<br>
+                                        <i class="bi bi-calendar-check me-1 text-primary"></i> Días: <strong>Lunes, Miércoles y Viernes</strong>.<br>
+                                        <i class="bi bi-clock me-1 text-primary"></i> Horario: de <strong>08:00 a 10:00 hs</strong>.<br>
+                                        <i class="bi bi-card-checklist me-1 text-primary"></i> Requisito: Presentarse con su <strong>DNI</strong>.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr class="my-4" style="color: var(--dorado); opacity: 0.3;">
+
+                    <!-- Documentación en el Estudio -->
+                    <div class="bg-light p-3 rounded-3">
+                        <h5 class="fw-bold h6 mb-3 text-center text-uppercase" style="color: var(--azul-legal); letter-spacing: 0.5px;">
+                            <i class="bi bi-file-earmark-text-fill me-1 text-secondary"></i> Instrumentos a firmar en el Estudio
+                        </h5>
+                        <p class="small text-muted text-center mb-3">Para formalizar la representación legal y dar inicio a las acciones, en nuestra oficina se suscribirá:</p>
+                        <div class="row text-center g-3">
+                            <div class="col-sm-4">
+                                <div class="p-2 bg-white rounded border shadow-sm h-100 d-flex align-items-center justify-content-center flex-column">
+                                    <i class="bi bi-pencil-square text-success mb-1 fs-5"></i>
+                                    <span class="small fw-semibold d-block">Poder para Trámite</span>
+                                    <span style="font-size: 0.75rem;" class="text-muted">Autorización formal ante ANSES</span>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="p-2 bg-white rounded border shadow-sm h-100 d-flex align-items-center justify-content-center flex-column">
+                                    <i class="bi bi-shield-check text-success mb-1 fs-5"></i>
+                                    <span class="small fw-semibold d-block">Consentimiento Informado</span>
+                                    <span style="font-size: 0.75rem;" class="text-muted">Sobre uso de Clave de Seguridad Social</span>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="p-2 bg-white rounded border shadow-sm h-100 d-flex align-items-center justify-content-center flex-column">
+                                    <i class="bi bi-folder-symlink text-success mb-1 fs-5"></i>
+                                    <span class="small fw-semibold d-block">Poder de ANSES</span>
+                                    <span style="font-size: 0.75rem;" class="text-muted">Para solicitud de documentación oficial</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
