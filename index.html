@@ -22,7 +22,17 @@
         /* Estilos para la sección de Reajustes */
         .seccion-reajustes { background: white; border-radius: 15px; padding: 40px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); border-top: 4px solid var(--dorado); }
         .alerta-clave { background-color: #fff3cd; border-left: 4px solid #ffc107; color: #664d03; padding: 12px; border-radius: 6px; font-size: 0.9rem; }
-        .destacado-gratuito { background-color: #e8f5e9; border: 1px solid #c8e6c9; color: #1b5e20; border-radius: 8px; padding: 12px 20px; font-size: 0.95rem; }
+        
+        /* Caja destacada más llamativa */
+        .destacado-gratuito { 
+            background-color: #e8f5e9; 
+            border: 2px solid #81c784; 
+            color: #1b5e20; 
+            border-radius: 10px; 
+            padding: 16px 20px; 
+            font-size: 1.15rem; 
+            box-shadow: 0 4px 10px rgba(46, 125, 50, 0.08); 
+        }
         .badge-anses-local { background-color: #e2f0ff; color: #005bb5; font-weight: bold; padding: 4px 8px; border-radius: 4px; }
     </style>
 </head>
@@ -99,9 +109,10 @@
                         </div>
                     </div>
 
-                    <!-- Mensaje informativo de viabilidad sin costo -->
+                    <!-- Mensaje informativo de viabilidad sin costo (Más grande y visible) -->
                     <div class="destacado-gratuito text-center my-4">
-                        <i class="bi bi-check-circle-fill me-2 fs-5"></i> <strong>La consulta inicial y el cálculo de viabilidad del reajuste se realizan sin costo.</strong>
+                        <i class="bi bi-check-circle-fill me-2 fs-4 align-middle"></i> 
+                        <span class="align-middle">La consulta inicial y el cálculo de viabilidad del reajuste se realizan <strong>SIN COSTO</strong>.</span>
                     </div>
 
                     <hr class="my-4" style="color: var(--dorado); opacity: 0.3;">
